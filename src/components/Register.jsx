@@ -1,10 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { useState } from "react";
+import { Link, UNSAFE_decodeViaTurboStream } from "react-router-dom";
+import { useState,useRef,useContext } from "react";
+import { appContext } from "../App";
 import "./Register.css";
 export default function Register() {
-  const [users, setUsers] = useState([]);
-  const [user, setUser] = useState({});
+  const {users,setUsers,user,setUser} = useContext(appContext);
   const [msg, setMsg] = useState();
   const handleSubmit = () => {
     const found = users.find((value) => value.email === user.email);
