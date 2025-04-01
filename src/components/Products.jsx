@@ -2,7 +2,7 @@ import "./Products.css"
 import { appContext } from "../App";
 import { useContext } from "react";
 export default function Products() {
-  const {user} = useContext(appContext)
+  const {user,products} = useContext(appContext)
   const products = [
     { id: 1, name: "Product 1", price: 30 },
     { id: 2, name: "Product 2", price: 40 },
